@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Text, TextInput, View, Image } from 'react-native';
 
 const getFullName = (firstName, secondName, thirdName) => {
   return firstName + " " + secondName + " " + thirdName;
 }
-const Cat2 = () => {
+const Cat2 = (props) => {
   return (
     <View>
-      <Text>I am also a cat!</Text>
+      <Text>I am also a cat! my name is {props.name}</Text>
     </View>
   )
 }
@@ -27,9 +27,13 @@ const Cat = () => {
       }}
       defaultValue="Name me!"
       />
-      <Cat2 />
-      <Cat2 />
-      <Cat2 />
+      <Image
+        source={{uri:"https://reactnative.dev/docs/assets/p_cat1.png"}}
+        style={{width: 200, height: 200}}
+      />
+      <Cat2 name="Cacu"/>
+      <Cat2 name="Jellylorum"/>
+      <Cat2 name="Spot"/>
     </view>
   );
 }
