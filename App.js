@@ -1,16 +1,36 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 
 const getFullName = (firstName, secondName, thirdName) => {
   return firstName + " " + secondName + " " + thirdName;
 }
+const Cat2 = () => {
+  return (
+    <View>
+      <Text>I am also a cat!</Text>
+    </View>
+  )
+}
 
 const Cat = () => {
-  const name = "Maru";
+  // const name = "Maru";
   return(
-    <text>
-      Hello, I am {getFullName("Rum", "Tum", "Tugger")}!
-    </text>
+    <view>
+      <Text>
+        Hello, I am {getFullName("Rum", "Tum", "Tugger")}!
+      </Text>
+      <TextInput
+      style={{
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1
+      }}
+      defaultValue="Name me!"
+      />
+      <Cat2 />
+      <Cat2 />
+      <Cat2 />
+    </view>
   );
 }
 
