@@ -1,29 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 
-const LotsOfStyles = () => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.red}>just red</Text>
-            <Text style={styles.bigBlue}>just bigBlue</Text>
-            <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
-            <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
-        </View>
-    );
+const flexDimensionsBasics = () => {
+    return <View style={{flex: 1}}>
+        <View style={{flex: 45, backgroundColor:'powderblue'}}/>
+        <View style={{flex: 500, backgroundColor:'skyblue'}}/>
+        <View style={{flex: 30, backgroundColor:'steelblue'}}/>
+    </View>
 }
 
-const styles = StyleSheet.create({
-    container: {
-        marginTop: 50,
-    },
-    bigBlue: {
-        color: 'blue',
-        fontWeight:'bold',
-        fontSize: 30,
-    },
-    red: {
-        color: 'red',
-    },
-})
-
-export default LotsOfStyles;
+export default flexDimensionsBasics;
